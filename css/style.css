@@ -1,7 +1,12 @@
+.body{
+    background-color: #fafafa;
+
+}
+
 .dino {
     width: 60px;
     height: 60px;
-    background: green;
+    background-image: url(../resource/img/dino.png);
     position: absolute;
     bottom: 0;
 }
@@ -9,11 +14,36 @@
 .cactus{
     width: 60px;
     height: 60px;
-    background: red;
+    background-image: url(../resource/img/cactus.png);
     position: absolute;
     bottom: 0;
 }
 
-.background{
+.game-over{
+    text-align: center;
+    color: #666666;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
+
+@keyframes backgroundSlidLeftToRight {
+    from{
+        background-position: 60000%;
+    } to {
+        background-position: 0%;
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: 0px;
+    background-image: url(../resource/img/background.png);
+    background-repeat:repeat-x;
+    animation: backgroundSlidLeftToRight 600s infinite linear;
+    -webkit-animation: backgroundSlidLeftToRight 600s infinite linear;
+    width: 1060px;
+    height: 200px;
+
+}
+
